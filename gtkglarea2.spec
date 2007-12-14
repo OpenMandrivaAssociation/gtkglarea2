@@ -48,7 +48,7 @@ GtkGLArea--. It is a C++ wrapper for gtkglarea written by Karl Nelson
 <kenelson@ece.ucdavis.edu>.
 
 %package -n %{libname}-devel
-Summary: GtkGLArea is an OpenGL widget for GTK+ -- includes and static libs
+Summary: Includes and static libs
 Group: Development/GNOME and GTK+
 Requires: %{libname} >= %{version}
 Provides: %{libname_orig}-devel = %{version}-%{release} %{name}-devel = %{version}-%{release} 
