@@ -14,7 +14,6 @@ Group:		System/Libraries
 Source:		%{fname}-%{version}.tar.bz2
 Patch0:		gtkglarea-1.99.0-lib64.patch
 
-BuildRoot:	%_tmppath/%name-%version-%release-root
 URL:		http://www.student.oulu.fi/~jlof/gtkglarea/
 BuildRequires:	libMesaGLU-devel
 BuildRequires:	gtk+2-devel
