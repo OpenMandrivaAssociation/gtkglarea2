@@ -26,10 +26,6 @@ to GtkDrawinigArea widget and adds only three extra functions.
 Lower level gdkgl functions make it easy to render on any widget that has
 OpenGL capable visual, rendering to off-screen pixmaps is also supported.
 
-A related project which may interest GTK-- developers is
-GtkGLArea--. It is a C++ wrapper for gtkglarea written by Karl Nelson
-<kenelson@ece.ucdavis.edu>.
-
 %package -n %{libname}
 Summary:        GtkGLArea is an OpenGL widget for GTK+ GUI toolkit
 Group:          System/Libraries
@@ -41,10 +37,6 @@ to GtkDrawinigArea widget and adds only three extra functions.
 
 Lower level gdkgl functions make it easy to render on any widget that has
 OpenGL capable visual, rendering to off-screen pixmaps is also supported.
-
-A related project which may interest GTK-- developers is
-GtkGLArea--. It is a C++ wrapper for gtkglarea written by Karl Nelson
-<kenelson@ece.ucdavis.edu>.
 
 %package -n %{libname}-devel
 Summary: Includes and static libs
