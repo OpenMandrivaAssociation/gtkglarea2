@@ -4,7 +4,7 @@
 %define libname_orig lib%{fname}
 %define libname %mklibname %fname %{major}
 
-Summary:	GtkGLArea is an OpenGL widget for GTK+ GUI toolkit
+Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	1.99.0
 Release: 	%mkrel 10
@@ -28,7 +28,7 @@ Lower level gdkgl functions make it easy to render on any widget that has
 OpenGL capable visual, rendering to off-screen pixmaps is also supported.
 
 %package -n %{libname}
-Summary:        GtkGLArea is an OpenGL widget for GTK+ GUI toolkit
+Summary:        OpenGL widget for GTK+ GUI toolkit
 Group:          System/Libraries
 
 %description -n %{libname}
