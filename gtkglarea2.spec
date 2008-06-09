@@ -68,8 +68,12 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall
 #ln -sf libgtkgl.so.5.0.0 $RPM_BUILD_ROOT%{_libdir}/libgtkgl.so.4
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
