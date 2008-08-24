@@ -6,13 +6,12 @@
 
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
-Version:	1.99.0
-Release: 	%mkrel 12
-License:	LGPL
+Version:	2.0.0
+Release: 	%mkrel 1
+License:	LGPLv2+
 Group:		System/Libraries
 
 Source:		%{fname}-%{version}.tar.bz2
-Patch0:		gtkglarea-1.99.0-lib64.patch
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 URL:		http://www.student.oulu.fi/~jlof/gtkglarea/
@@ -52,13 +51,9 @@ Libraries and includes files you can use for GtkGLArea development
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q -n %fname-%version
-%patch0 -p1 -b .lib64
 
 %build
-libtoolize --copy --force
-aclocal
-automake -a -c
-autoconf
+%define _disable_ld_no_undefined 1
 %configure2_5x 
 # (gc) this sucking rpath thing...
 %make
