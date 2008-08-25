@@ -7,7 +7,7 @@
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	2.0.0
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 License:	LGPLv2+
 Group:		System/Libraries
 
@@ -53,15 +53,12 @@ rm -rf $RPM_BUILD_ROOT
 %setup -q -n %fname-%version
 
 %build
-%define _disable_ld_no_undefined 1
 %configure2_5x 
-# (gc) this sucking rpath thing...
-%make
+%make LIBS=-lX11
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-#ln -sf libgtkgl.so.5.0.0 $RPM_BUILD_ROOT%{_libdir}/libgtkgl.so.4
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
@@ -76,8 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n %{libname}
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog README
-%{_libdir}/lib*.so.*
-%_libdir/pkgconfig/gtkgl-2.0.pc
+%{_libdir}/libgtkgl-%major.so.1*
 
 %files -n %{libname}-devel
 %defattr(-, root, root)
@@ -85,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.so
 %{_libdir}/*.*a
 %{_includedir}/*
-#%{_datadir}/aclocal/*
+%_libdir/pkgconfig/gtkgl-2.0.pc
 
