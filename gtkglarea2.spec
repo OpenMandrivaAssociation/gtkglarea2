@@ -12,6 +12,7 @@ License:	LGPLv2+
 Group:		System/Libraries
 
 Source:		%{fname}-%{version}.tar.bz2
+Patch0:		gtkglarea-2.0.0-wformat.patch
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
 URL:		http://www.student.oulu.fi/~jlof/gtkglarea/
@@ -51,6 +52,7 @@ Libraries and includes files you can use for GtkGLArea development
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q -n %fname-%version
+%patch0 -p1 -b .wformat
 
 %build
 %configure2_5x 
