@@ -6,12 +6,12 @@
 
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
-Version:	2.0.0
-Release: 	%mkrel 3
+Version:	2.0.1
+Release: 	%mkrel 1
 License:	LGPLv2+
 Group:		System/Libraries
 
-Source:		%{fname}-%{version}.tar.bz2
+Source:		http://ftp.gnome.org/pub/GNOME/sources/%name/%{fname}-%{version}.tar.bz2
 Patch0:		gtkglarea-2.0.0-wformat.patch
 
 BuildRoot:	%_tmppath/%name-%version-%release-root
