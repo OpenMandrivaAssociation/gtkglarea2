@@ -7,7 +7,7 @@
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	2.0.1
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 License:	LGPLv2+
 Group:		System/Libraries
 
