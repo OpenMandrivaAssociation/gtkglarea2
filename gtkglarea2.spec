@@ -49,7 +49,7 @@ Provides: %{libname_orig}-devel = %{version}-%{release} %{name}-devel = %{versio
 Libraries and includes files you can use for GtkGLArea development
 
 %prep
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %setup -q -n %fname-%version
 %patch0 -p1 -b .wformat
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %make LIBS=-lX11
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 
 %if %mdkversion < 200900
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-, root, root)
