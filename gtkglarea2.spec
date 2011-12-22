@@ -12,6 +12,7 @@ Group:		System/Libraries
 
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{fname}-%{version}.tar.bz2
 Patch0:		gtkglarea-2.0.0-wformat.patch
+Patch1:		gtkglarea-2.0.1-link-against-libm.patch
 
 URL:		http://www.mono-project.com/GtkGLArea
 BuildRequires:	pkgconfig(glu)
@@ -48,7 +49,9 @@ Libraries and includes files you can use for GtkGLArea development
 
 %prep
 %setup -q -n %{fname}-%{version}
-%patch0 -p1 -b .wformat
+%patch0 -p1 -b .wformat~
+%patch1 -p1 -b .libs~
+autoreconf -fi
 
 %build
 %configure2_5x 
