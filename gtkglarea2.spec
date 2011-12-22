@@ -40,8 +40,8 @@ OpenGL capable visual, rendering to off-screen pixmaps is also supported.
 %package -n	%{libname}-devel
 Summary:	Includes and static libs
 Group:		Development/GNOME and GTK+
-Requires:	%{libname} >= %{version}
-Provides:	%{name}-devel = %{version}-%{release} 
+Requires:	%{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n	%{libname}-devel
 Libraries and includes files you can use for GtkGLArea development
