@@ -14,8 +14,8 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{fname}-%{version}.tar.bz
 Patch0:		gtkglarea-2.0.0-wformat.patch
 
 URL:		http://www.mono-project.com/GtkGLArea
-BuildRequires:	mesaglu-devel
-BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(gtk+-2.0)
 
 %description
 Just as GTK+ is build on top of GDK, GtkGLArea is built on top of gdkgl which
