@@ -1,7 +1,6 @@
 %define	major	2.0
 
 %define	fname	gtkglarea
-%define	libname_orig lib%{fname}
 %define	libname	%mklibname %fname %{major}
 
 Summary:	OpenGL widget for GTK+ GUI toolkit
@@ -42,7 +41,7 @@ OpenGL capable visual, rendering to off-screen pixmaps is also supported.
 Summary:	Includes and static libs
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} >= %{version}
-Provides:	%{libname_orig}-devel = %{version}-%{release} %{name}-devel = %{version}-%{release} 
+Provides:	%{name}-devel = %{version}-%{release} 
 
 %description -n	%{libname}-devel
 Libraries and includes files you can use for GtkGLArea development
