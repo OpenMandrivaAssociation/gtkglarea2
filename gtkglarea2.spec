@@ -14,7 +14,7 @@ Group:		System/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{fname}-%{version}.tar.bz2
 Patch0:		gtkglarea-2.0.0-wformat.patch
 
-URL:		http://www.student.oulu.fi/~jlof/gtkglarea/
+URL:		http://www.mono-project.com/GtkGLArea
 BuildRequires:	mesaglu-devel
 BuildRequires:	gtk+2-devel
 
@@ -53,7 +53,7 @@ Libraries and includes files you can use for GtkGLArea development
 
 %build
 %configure2_5x 
-%make LIBS=-lX11
+%make
 
 %install
 %makeinstall
