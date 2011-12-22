@@ -17,7 +17,8 @@ Patch1:		gtkglarea-2.0.1-link-against-libm.patch
 URL:		http://www.mono-project.com/GtkGLArea
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(gtk+-2.0)
-%{rename	%{mklibname %{fname} 2.0}}
+%define	bogus	%{mklibname %{fname} 2.0}
+%rename		bogus
 
 %description
 Just as GTK+ is build on top of GDK, GtkGLArea is built on top of gdkgl which
