@@ -1,12 +1,12 @@
 %define	major	1
-
+%define api 2.0
 %define	fname	gtkglarea
-%define	libname	%mklibname %{fname} %{major}
+%define	libname	%mklibname %{fname} %{api} %{major}
 
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	2.0.1
-Release:	7
+Release:	8
 License:	LGPLv2+
 Group:		System/Libraries
 
