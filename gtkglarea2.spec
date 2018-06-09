@@ -8,11 +8,11 @@
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	2.0.1
-Release:	17
+Release:	18
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.mono-project.com/GtkGLArea
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{fname}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkglarea/%(echo %{version} |cut -d. -f1-2)/%{fname}-%{version}.tar.bz2
 Patch0:		gtkglarea-2.0.0-wformat.patch
 Patch1:		gtkglarea-2.0.1-link-against-libm.patch
 
