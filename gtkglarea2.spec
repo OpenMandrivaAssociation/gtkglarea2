@@ -53,7 +53,7 @@ Libraries and includes files you can use for GtkGLArea development
 
 %prep
 %setup -qn %{fname}-%{version}
-%apply_patches
+%autopatch -p1
 autoreconf -fi
 
 %build
