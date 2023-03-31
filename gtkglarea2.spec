@@ -8,7 +8,7 @@
 Summary:	OpenGL widget for GTK+ GUI toolkit
 Name:		gtkglarea2
 Version:	2.0.1
-Release:	19
+Release:	20
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.mono-project.com/GtkGLArea
