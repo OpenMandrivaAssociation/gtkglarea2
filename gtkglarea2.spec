@@ -16,6 +16,11 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkglarea/%(echo %{version} |cut
 Patch0:		gtkglarea-2.0.0-wformat.patch
 Patch1:		gtkglarea-2.0.1-link-against-libm.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(gtk+-2.0)
 
